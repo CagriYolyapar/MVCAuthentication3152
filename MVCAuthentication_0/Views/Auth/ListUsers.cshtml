@@ -1,0 +1,27 @@
+﻿@model AuthVM
+@{
+    ViewBag.Title = "ListUsers";
+}
+
+<div class="panel panel-primary">
+    <div class="panel panel-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Isim</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (AppUser item in Model.AppUsers)
+                {
+                    <tr>
+                        <td>@item.UserName</td>
+                        <td>@item.Role</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

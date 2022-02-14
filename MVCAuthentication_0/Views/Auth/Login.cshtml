@@ -1,0 +1,26 @@
+﻿@model AuthVM
+@{
+    ViewBag.Title = "Login";
+}
+
+<h1 style="color:red"> @ViewBag.Message    </h1>
+
+
+@using (Html.BeginForm()) { 
+
+
+    <div>
+        @Html.TextBoxFor(x=>x.AppUser.UserName,new { @class="form-control"})
+    </div>
+    <div>
+        @Html.PasswordFor(x => x.AppUser.Password, new {@class="form-control"})
+
+    </div>
+    <div>
+        <button class="btn btn-primary">Login</button>
+    </div>
+
+
+
+}
+
